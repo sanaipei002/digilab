@@ -1,0 +1,44 @@
+<!-- Sidebar -->
+<nav class="col-md-3 col-lg-2 d-md-block sidebar bg-dark">
+    <div class="sidebar-sticky">
+        <h4 class="text-white text-center py-3">Navigation</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'digilab/patient/profile' %}active{% endif %}" 
+                   href="{% url 'digilab/patient/profile' %}">
+                    Profile Page
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'digilab/patient/test_available' %}active{% endif %}" 
+                   href="{% url 'digilab/patient/test_available' %}">
+                    Test Available
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'digilab/patient/request_new_test' %}active{% endif %}" 
+                   href="{% url 'digilab/patient/request_new_test' %}">
+                    Request New Test
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'digilab/patient/test_results' %}active{% endif %}" 
+                   href="{% url 'digilab/patient/test_results' %}">
+                    Test Results
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'digilab/patient/medical_history' %}active{% endif %}" 
+                   href="{% url 'digilab/patient/medical_history' %}">
+                    Medical History
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if current_page == 'lipa_na_mpesa' %}active{% endif %}" 
+                   href="{% url 'lipa_na_mpesa' %}">
+                    Payment
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

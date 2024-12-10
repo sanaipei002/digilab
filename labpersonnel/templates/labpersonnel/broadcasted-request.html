@@ -1,0 +1,31 @@
+{% extends 'partials/base.html' %}
+{% block title %}Broadcasted Requests{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      {% include 'partials/labpersonnel_sidebar.html' %}
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-9">
+      <div class="main-content">
+        <h2 class="text-center mb-4">Broadcasted Requests</h2>
+        <ul class="list-group">
+          {% for request in broadcasted_requests %}
+            <li class="list-group-item">
+              <strong>{{ request.message }}</strong> - Broadcasted by 
+              <em>{{ request.lab_personnel.name }}</em> at {{ request.broadcasted_at }}
+            </li>
+          {% empty %}
+            <li class="list-group-item text-center">No broadcasted requests at the moment.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

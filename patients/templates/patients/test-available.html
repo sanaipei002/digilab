@@ -1,0 +1,181 @@
+<!-- templates/digilab/testavailable_list.html -->
+{% extends 'partials/base.html' %}
+{% block title %}Test Available Page{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {% include 'partials/patient_sidebar.html' %}
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <h1 class="mt-4 mb-4 text-center">Common Laboratory Tests</h1>
+            <div class="row">
+                <style>
+                    .info-card {
+                        transition: background-color 0.3s, color 0.3s;
+                    }
+                    .info-card:hover {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                </style>
+
+                <!-- Test Cards -->
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Complete Blood Count (CBC)</h4>
+                            <p class="card-text">Measures blood components to assess health.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 500</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic Metabolic Panel (BMP)</h4>
+                            <p class="card-text">Tests electrolytes and kidney function.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 2000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Lipid Panel</h4>
+                            <p class="card-text">Measures cholesterol levels and heart health indicators.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 1,500</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Malaria Rapid Diagnostic Test (RDT)</h4>
+                            <p class="card-text">Detects malaria parasites in the blood.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 300</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">H. Pylori Test</h4>
+                            <p class="card-text">Detects bacteria causing stomach ulcers.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 800</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">HIV Antibody Test</h4>
+                            <p class="card-text">Detects antibodies for HIV.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 300</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Prostate-Specific Antigen (PSA)</h4>
+                            <p class="card-text">Screening for prostate cancer.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 1,600/p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Urinalysis</h4>
+                            <p class="card-text">Assesses urine for infections and diseases.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 300</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Liver Function Test (LFT)</h4>
+                            <p class="card-text">Evaluates liver health and function.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 1500</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Thyroid Function Test</h4>
+                            <p class="card-text">Measures levels of thyroid hormones.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 3,500</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Pregnancy Test (Urine/Blood)</h4>
+                            <p class="card-text">Detects pregnancy by measuring hCG hormone.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 600</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Blood Glucose Test</h4>
+                            <p class="card-text">Checks blood sugar levels for diabetes.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 300</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Tuberculosis (TB) Test</h4>
+                            <p class="card-text">Detects active or latent TB infection.</p>
+                            <p class="card-text"><strong>Cost:</strong> FREE </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">Coagulation Test (PT/INR)</h4>
+                            <p class="card-text">Measures blood clotting ability.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 2,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card info-card">
+                        <div class="card-body">
+                            <h4 class="card-title">COVID-19 PCR Test</h4>
+                            <p class="card-text">Detects active COVID-19 infection.</p>
+                            <p class="card-text"><strong>Cost:</strong> KES 2000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

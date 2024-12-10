@@ -1,0 +1,92 @@
+{% extends 'partials/base.html' %}
+{% block title %}Ongoing Tests Page{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {% include 'partials/labpersonnel_sidebar.html' %}
+        </div>
+
+        <!-- Ongoing Tests Section -->
+        <div class="col-md-9">
+            <h2 class="text-center mb-4">Ongoing Tests</h2>
+            <div class="row">
+                <!-- Test 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Blood Sugar Level</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Patient: John Doe</h6>
+                            <p class="card-text">Started At: 2024-10-01 10:00</p>
+                            <p class="card-text">Result: Awaiting Result</p>
+                            <p class="card-text">Status: In Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cholesterol Test</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Patient: Jane Smith</h6>
+                            <p class="card-text">Started At: 2024-10-02 09:30</p>
+                            <p class="card-text">Result: Awaiting Result</p>
+                            <p class="card-text">Status: In Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Complete blood count</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Patient: Michael Brown</h6>
+                            <p class="card-text">Started At: 2024-10-02 11:00</p>
+                            <p class="card-text">Result: Awaiting Result</p>
+                            <p class="card-text">Status: In Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">COVID-19 Test</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Patient: Emily White</h6>
+                            <p class="card-text">Started At: 2024-10-03 08:45</p>
+                            <p class="card-text">Result: Awaiting Result</p>
+                            <p class="card-text">Status: In Progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Inline CSS for styling cards -->
+<style>
+    .custom-card {
+        background-color: white;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #ddd;
+    }
+
+    .custom-card:hover {
+        background-color: #007bff;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .custom-card:hover .card-title,
+    .custom-card:hover .card-subtitle,
+    .custom-card:hover .card-text {
+        color: white;
+    }
+</style>
+{% endblock content %}

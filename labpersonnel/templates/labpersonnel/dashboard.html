@@ -1,0 +1,107 @@
+{% extends 'base.html'%}
+{% block title %}LabPersonnel Dashboard{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Personnel Dashboard - DigiLab</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+    .sidebar {
+      min-height: 100vh;
+      background-color: #343a40;
+      padding-top: 20px;
+    }
+    .sidebar .nav-link {
+      color: #ffffff;
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #495057;
+      border-radius: 5px;
+    }
+    .sidebar h4 {
+      font-size: 22px;
+      padding-bottom: 20px;
+    }
+    .main-content {
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .main-content h2 {
+      margin-bottom: 20px;
+    }
+    .dashboard-section {
+      background-color: #e9ecef;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      {% include 'partials/labpersonnel_sidebar.html' %}
+
+
+      <!-- Main Content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div class="main-content">
+          <h2>Welcome to the Lab Personnel Dashboard</h2>
+          <p>Select an option from the sidebar to get started or view the most recent updates below:</p>
+
+          <!-- Recent Updates Section -->
+          <div class="dashboard-section">
+            <h4>Recent Tests Overview</h4>
+            <ul>
+              <li>Test: Blood Sugar for John Doe - <strong>Ongoing</strong></li>
+              <li>Test: Cholesterol for Jane Smith - <strong>Completed</strong></li>
+              <li>Test: X-Ray for Michael Brown - <strong>Ongoing</strong></li>
+              <li>Test: COVID-19 for Emily White - <strong>Completed</strong></li>
+            </ul>
+          </div>
+
+          <!-- Notifications Section -->
+          <div class="dashboard-section">
+            <h4>Notifications</h4>
+            <ul>
+              <li>New test request from Jane Smith (2024-10-02)</li>
+              <li>Payment request approved for John Doe (2024-10-01)</li>
+              <li>Lab equipment maintenance scheduled for 2024-10-05</li>
+            </ul>
+          </div>
+
+          <!-- Action Section -->
+          <div class="dashboard-section">
+            <h4>Quick Actions</h4>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <a href="broadcasted_requests" class="btn btn-primary">View Broadcasted Requests</a>
+              <a href="ongoing_tests" class="btn btn-secondary">View Ongoing Tests</a>
+              <a href="request_payment" class="btn btn-success">Request Payment</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock content %}

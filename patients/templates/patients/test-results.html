@@ -1,0 +1,27 @@
+<!-- templates/digilab/testresults_list.html -->
+{% extends 'partials/base.html' %}
+{% block title %}Test Results{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {% include 'partials/patient_sidebar.html' %}
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <div class="main-content">
+                <h2 class="mt-4 mb-4 text-center">Test Results</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>No test results available yet. Please request a test.</p>
+                        <!-- Later populate test results dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

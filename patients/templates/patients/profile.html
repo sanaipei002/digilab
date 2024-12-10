@@ -1,0 +1,30 @@
+{% extends 'partials/base.html' %}
+{% block title %}Patient Profile{% endblock %}
+
+{% block content %}
+<div class="container-fluid min-vh-100 d-flex">
+    <div class="row flex-grow-1">
+        <!-- Sidebar -->
+        {% include 'partials/patient_sidebar.html' %}
+
+        <!-- Main Content -->
+        <div class="col-md-9 col-lg-10 py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Patient Profile</h2>
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h4 class="card-title text-info mb-3">Profile Details</h4>
+                        <hr>
+                        <p><strong>Name:</strong> John Doe</p>
+                        <p><strong>Email:</strong> john.doe@example.com</p>
+                        <p><strong>Phone:</strong> +254 712 345 678</p>
+                        <!-- Additional profile info -->
+                        <p><strong>Date of Birth:</strong> January 1, 1990</p>
+                        <p><strong>Address:</strong> 1234 Mombasa Road, Mombasa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
